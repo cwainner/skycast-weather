@@ -1,4 +1,16 @@
 .header{
-  font-size:  42px;
+  font-size:  60px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.navbar-dark, .menu{
+  background-color: darkslategray;
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-link:hover{
+  color: lightsteelblue;
 }
