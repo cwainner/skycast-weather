@@ -9,8 +9,11 @@ import * as $ from 'jquery';
 export class AppComponent {
   title = 'SkyCast Weather';
 
-  toggleForecast(){
-    console.log("Click!");
-    $('#currentForecast').toggle();
+  showCurrentForecast(){
+    $('#currentForecast').show();
+  }
+
+  showHistoricalForecast(){
+    $('#currentForecast').hide();
   }
 }
