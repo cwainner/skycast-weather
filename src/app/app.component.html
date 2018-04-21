@@ -27,6 +27,6 @@
   </div>
   <!-- sub-components -->
   <div class="cell-small-11">
-    <app-current-forecast id="currentForecast" [addressToSearch]="address" ></app-current-forecast>
+    <app-current-forecast id="currentForecast" [addressToSearch]="address | async" ></app-current-forecast>
   </div>
 </div>

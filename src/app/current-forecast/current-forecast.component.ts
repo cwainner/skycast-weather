@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChange } from '@angular/core';
 import { AddressSearchService } from '../address-search.service';
 import * as $ from 'jquery';
 
@@ -17,6 +17,12 @@ export class CurrentForecastComponent implements OnInit {
   constructor(private addressSearchService: AddressSearchService) { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChange){
+    if(changes['addressToSearch']){
+      this.getSearchedAddressLocation(this.addressToSearch);
+    }
   }
 
   getSearchedAddressLocation(address: string){
