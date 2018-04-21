@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { CurrentForecastComponent } from './current-forecast/current-forecast.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CurrentForecastComponent
   ],
   imports: [
     BrowserModule
