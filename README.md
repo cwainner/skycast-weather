@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
 
+## Installation
+
+Please note that a Google Maps Geocoding API key and a Dark Sky forecast API key are required for this project. The key information should be placed in `*base folder*\src\app\api-keys.ts` in the following format:
+
+```
+export  var apiConfig = {
+  geoCodingKey: 'XXXXXXX',
+  weatherKey: 'XXXXXX'
+}
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
