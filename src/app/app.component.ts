@@ -8,6 +8,7 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
   title = 'SkyCast Weather';
+  address: string;
 
   showCurrentForecast(){
     $('#currentForecast').show();
@@ -15,5 +16,9 @@ export class AppComponent {
 
   showHistoricalForecast(){
     $('#currentForecast').hide();
+  }
+
+  searchForLocation(){
+    this.address = $('#searchLocationField').value;
   }
 }

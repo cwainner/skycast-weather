@@ -15,8 +15,8 @@
   </div>
   <div class="top-bar-right">
     <ul class="menu">
-      <li><input type="search" placeholder="Location"></li>
-      <li><button type="button" class="button">Search</button></li>
+      <li><input id="searchLocationField" type="search" placeholder="Location"></li>
+      <li><button type="button" class="button" (click)="searchForLocation()">Search</button></li>
     </ul>
   </div>
 </div>
@@ -27,6 +27,6 @@
   </div>
   <!-- sub-components -->
   <div class="cell-small-11">
-    <app-current-forecast id="currentForecast"></app-current-forecast>
+    <app-current-forecast id="currentForecast" [addressToSearch]="address" ></app-current-forecast>
   </div>
 </div>
