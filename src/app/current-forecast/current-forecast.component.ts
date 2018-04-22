@@ -20,7 +20,7 @@ export class CurrentForecastComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}){
-    if(changes['addressToSearch']){
+    if(changes['addressToSearch'] && this.addressToSearch !== undefined && this.addressToSearch !== null){
       this.getSearchedAddressLocation(this.addressToSearch);
     }
   }
@@ -34,8 +34,8 @@ export class CurrentForecastComponent implements OnInit, OnChanges {
 
   updateLatLong(response: Object){
     console.log(response['results'][0]['geometry']['location']);
-    this.addressToSearch = response['results'][0]['geometry']['location']['lat'].toString() + ", " + response['results'][0]['geometry']['location']['lng'].toString();
-    console.log(this.addressToSearch);
+    this.addressLatLong = response['results'][0]['geometry']['location']['lat'].toString() + ", " + response['results'][0]['geometry']['location']['lng'].toString();
+    console.log(this.addressLatLong);
   }
 
 }
