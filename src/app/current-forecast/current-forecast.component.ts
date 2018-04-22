@@ -27,12 +27,15 @@ export class CurrentForecastComponent implements OnInit, OnChanges {
 
   getSearchedAddressLocation(address: string){
     this.addressSearchService.getGeoInfoFromAddress(address)
-    .subscribe(data => this.updateLatLong(data));
+    .subscribe(response => {
+      this.updateLatLong(response);
+    });
   }
 
-  updateLatLong(data: any){
-    this.addressLatLong = data['results'];
-    console.log(this.addressLatLong);
+  updateLatLong(response: Object){
+    console.log(response['results'][0]['geometry']['location']);
+    this.addressToSearch = response['results'][0]['geometry']['location']['lat'].toString() + ", " + response['results'][0]['geometry']['location']['lng'].toString();
+    console.log(this.addressToSearch);
   }
 
 }
