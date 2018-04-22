@@ -19,6 +19,6 @@ export class AppComponent {
   }
 
   searchForLocation(){
-    this.address = $('#searchLocationField').value;
+    this.address = $('#searchLocationField').val();
   }
 }
