@@ -13,7 +13,8 @@ export class AddressSearchService {
         params: {
           address: address,
           key: apiConfig.geoCodingKey
-        }
+        },
+        responseType: 'json'
       });
   }
 }
